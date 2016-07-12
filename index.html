@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Pokemon GO Server Status</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/main.js"></script>
+</head>
+
+<body onload="pokemonGOStatus.init()">
+    <h1>Pokemon GO Server Status</h1>
+    <div class="loader active" id="loader">
+        <svg class="circular" viewBox="25 25 50 50">
+                <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
+            </svg>
+    </div>
+    <div id="status" class="status"></div>
+</body>
+
+</html>
