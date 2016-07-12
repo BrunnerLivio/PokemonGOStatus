@@ -274,7 +274,7 @@ a:hover{
 }
 footer{
     position:absolute;
-    bottom:20px;
+    bottom:30px;
     width:100%;
     text-align:center;
 }
@@ -284,6 +284,7 @@ footer{
 @media only screen and (max-width: 767px) {
     h1{
         font-size:24px;
+        font-weight:300;
     }
     .github-button{
         width:40px;

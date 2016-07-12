@@ -58,6 +58,9 @@ var pokemonGOStatus = (function (self) {
         pokemonGOServer.getResponseTime(function (time) {
             helper.removeClass(self.$loader, 'active');
             helper.addClass(self.$status, 'status-active');
+            helper.removeClass(self.$status, 'status-ok');
+            helper.removeClass(self.$status, 'status-slow');
+            helper.removeClass(self.$status, 'status-down');
             if (time < 800) {
                 helper.addClass(self.$status, 'status-ok');
             }
