@@ -7,5 +7,9 @@ A website which show you the actual server status of Pokemon GO.
 
 View the index.html in your browser.
 
+## Reference
+
+Code inspiration from [is-pokemon-go-up](https://www.npmjs.com/package/is-pokemon-go-up)-NPM package. Go check it out!
+
 ## Author
 [Livio Brunner](http://brunnerliv.io/)
