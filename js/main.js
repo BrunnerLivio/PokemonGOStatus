@@ -1,3 +1,6 @@
+/**
+ * Various helper functions
+ */
 var helper = (function () {
     function addClass(el, className) {
         if (el.classList)
@@ -16,9 +19,13 @@ var helper = (function () {
         removeClass: removeClass
     };
 })();
-
+/**
+ * Service for Pokemon GO Server actions
+ */
 var pokemonGOServer = (function () {
-
+    /**
+     * Returns the respond time in milliseconds
+     */
     function getResponseTime(callback) {
         var request = new XMLHttpRequest();
         var start_time = new Date().getTime();
@@ -34,7 +41,13 @@ var pokemonGOServer = (function () {
         getResponseTime: getResponseTime
     };
 })();
+/**
+ * Module for the 'Pokemon Go Status Website'
+ */
 var pokemonGOStatus = (function (self) {
+    /**
+     * Initializes this module
+     */
     self.init = function () {
         self.$status = document.getElementById('status');
         self.$loader = document.getElementById('loader');
@@ -46,6 +59,10 @@ var pokemonGOStatus = (function (self) {
         window.setInterval(self.updateIntervalStatus, 1000);
     };
 
+    /**
+     * Updates the status of the interval in the ui
+     * and updates the Status every 5th call
+     */
     self.updateIntervalStatus = function () {
         self.$intervalStatus.innerText = "Refreshing in " + self.intervalSeconds + " seconds";
         self.intervalSeconds--;
@@ -54,6 +71,10 @@ var pokemonGOStatus = (function (self) {
             self.intervalSeconds = 5;
         }
     }
+    /**
+     * Updates the status in the UI by the corresponding
+     * response time
+     */
     self.updateStatus = function () {
         pokemonGOServer.getResponseTime(function (time) {
             helper.removeClass(self.$loader, 'active');
