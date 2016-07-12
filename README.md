@@ -11,5 +11,5 @@ View the index.html in your browser.
 
 Code inspiration from [is-pokemon-go-up](https://www.npmjs.com/package/is-pokemon-go-up)-NPM package. Go check it out!
 
-## Author
-[Livio Brunner](http://brunnerliv.io/)
+## License
+MIT © [Livio Brunner](http://brunnerliv.io/)
