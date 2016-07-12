@@ -54,21 +54,25 @@ body{
     background: -webkit-linear-gradient(top,  #28b29b 0%,#bde8a1 50%,#bde8a1 100%);
     background: linear-gradient(to bottom,  #28b29b 0%,#bde8a1 50%,#bde8a1 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#28b29b', endColorstr='#bde8a1',GradientType=0 );
+    color:#31705F;
 }
 h1{
     text-align:center;
-    color:#31705F;
     font-size:40px;
     margin-bottom:50px;
     text-transform: uppercase;
     font-weight:100;
 }
-@media only screen and (max-width: 767px) {
-    h1{
-        font-size:20px;
-    }
-}
 
+a{
+    color:#204F57;
+    -webkit-transition: color 0.2s ease-in-out;
+    -moz-transition: color 0.2s ease-in-out;
+    transition: color 0.2s ease-in-out;
+}
+a:hover{
+    color:#102A2D;
+}
 .container{
     padding-top:40px;
     background-color:rgba(255,255,255,0.5);
@@ -243,9 +247,10 @@ h1{
 }
 .github-button{
     position:absolute;
-    top:20px;
+    top:50%;
+    transform: translateY(-50%);
     right:0;
-    background-color:rgba(255,255,255,0.2);
+    background-color:#204F57;
     width:70px;
     height:70px;
     border-bottom-left-radius: 5px;
@@ -255,7 +260,7 @@ h1{
     transition: background-color 0.2s ease-in-out;
 }
 .github-button:hover{
-    background-color:rgba(255,255,255,0.4);
+    background-color:#102A2D;
 }
 
 .github-icon{
@@ -266,4 +271,22 @@ h1{
     top:50%;
     left:50%;
     transform:translate(-50%, -50%);
+}
+footer{
+    position:absolute;
+    bottom:20px;
+    width:100%;
+    text-align:center;
+}
+#intervalStatus{
+    margin-top:10px;
+}
+@media only screen and (max-width: 767px) {
+    h1{
+        font-size:20px;
+    }
+    .github-button{
+        width:40px;
+        height:40px;
+    }
 }

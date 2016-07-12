@@ -38,9 +38,22 @@ var pokemonGOStatus = (function (self) {
     self.init = function () {
         self.$status = document.getElementById('status');
         self.$loader = document.getElementById('loader');
+        self.$intervalStatus = document.getElementById('intervalStatus');
         self.updateStatus();
+        self.intervalSeconds = 5;
+        self.updateIntervalStatus();        
+        // Set up update interval
+        window.setInterval(self.updateIntervalStatus, 1000);
     };
 
+    self.updateIntervalStatus = function () {
+        self.$intervalStatus.innerText = "Refreshing in " + self.intervalSeconds + " seconds";
+        self.intervalSeconds--;
+        if (self.intervalSeconds == -1) {
+            self.updateStatus();
+            self.intervalSeconds = 5;
+        }
+    }
     self.updateStatus = function () {
         pokemonGOServer.getResponseTime(function (time) {
             helper.removeClass(self.$loader, 'active');
