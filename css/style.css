@@ -207,9 +207,9 @@ a:hover{
     left: 50%;
     transform: translateX(-50%);
     opacity: 0;
-    -webkit-transition: opacity 0.5s ease-in-out;
-    -moz-transition: opacity 0.5s ease-in-out;
-    transition: opacity 0.5s ease-in-out;
+    -webkit-transition: opacity 0.5s ease-in-out, background-color 0.5s ease-in-out;
+    -moz-transition: opacity 0.5s ease-in-out, background-color 0.5s ease-in-out;
+    transition: opacity 0.5s ease-in-out, background-color 0.5s ease-in-out;
 }
 
 .status::after {
