@@ -1,0 +1,28 @@
+{
+  "name": "pokemongostatus",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BrunnerLivio/PokemonGOStatus.git"
+  },
+  "keywords": [
+    "pokemongo",
+    "serverstatus"
+  ],
+  "author": "Livio Brunner",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BrunnerLivio/PokemonGOStatus/issues"
+  },
+  "homepage": "https://github.com/BrunnerLivio/PokemonGOStatus#readme",
+  "dependencies": {
+    "dateformat": "^1.0.12",
+    "is-pokemon-go-up": "^1.2.0",
+    "mongoose": "^4.5.5"
+  }
+}
