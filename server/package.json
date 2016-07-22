@@ -21,7 +21,9 @@
   },
   "homepage": "https://github.com/BrunnerLivio/PokemonGOStatus#readme",
   "dependencies": {
+    "body-parser": "^1.15.2",
     "dateformat": "^1.0.12",
+    "express": "^4.14.0",
     "is-pokemon-go-up": "^1.2.0",
     "mongoose": "^4.5.5"
   }
