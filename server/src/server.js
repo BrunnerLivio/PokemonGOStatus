@@ -15,7 +15,7 @@ var router = express.Router();
 mongoose.connect('mongodb://localhost/test');
 
 router.get('/status', function (req, res) {
-    Status.find(function (err, status) {
+    Status.find().sort('-timestamp').limit(200).exec(function (err, status) {
         if (err)
             res.send(err);
 
@@ -30,5 +30,5 @@ app.listen(port);
 
 
 updateStatus();
-// Every 2 minute
-setInterval(updateStatus, 1000 * 60 * 2);
+// Every 5 minute
+setInterval(updateStatus, 1000 * 60 * 5);

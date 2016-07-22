@@ -1,3 +1,3 @@
 var mongoose = require('mongoose');
 
-module.exports = mongoose.model('Status', { state: Number, timestamp: { type: Date, default: Date.now } });
+module.exports = mongoose.model('Status', { responseTime: Number, state: Number, timestamp: { type: Date, default: Date.now } });
